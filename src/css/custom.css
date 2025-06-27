@@ -1,0 +1,318 @@
+/**
+ * Flutter-themed Docusaurus CSS
+ * Inspired by Flutter's Material Design and brand colors
+ */
+
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+/* Flutter Brand Colors */
+:root {
+  /* Primary Flutter Blue */
+  --ifm-color-primary: #0175c2;
+  --ifm-color-primary-dark: #02569a;
+  --ifm-color-primary-darker: #02528c;
+  --ifm-color-primary-darkest: #024373;
+  --ifm-color-primary-light: #0288d1;
+  --ifm-color-primary-lighter: #029cd4;
+  --ifm-color-primary-lightest: #03a9f4;
+
+  /* Flutter Accent Colors */
+  --flutter-cyan: #00acc1;
+  --flutter-teal: #00897b;
+  --flutter-indigo: #3f51b5;
+  --flutter-purple: #7b1fa2;
+  --flutter-orange: #ff9800;
+  --flutter-pink: #e91e63;
+
+  /* Background and surfaces */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f8fafc;
+  --ifm-card-background: #ffffff;
+
+  /* Typography */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  --ifm-code-font-size: 90%;
+
+  /* Spacing and sizing */
+  --ifm-heading-margin-top: 2rem;
+  --ifm-heading-margin-bottom: 1rem;
+  --ifm-paragraph-margin-bottom: 1.25rem;
+
+  /* Code highlighting */
+  --docusaurus-highlighted-code-line-bg: rgba(1, 117, 194, 0.1);
+
+  /* Borders and shadows */
+  --ifm-card-border-radius: 12px;
+  --ifm-button-border-radius: 8px;
+  --ifm-global-shadow-lw: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ifm-global-shadow-tl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Dark mode Flutter theme */
+[data-theme='dark'] {
+  --ifm-color-primary: #54c5f8;
+  --ifm-color-primary-dark: #29b6f6;
+  --ifm-color-primary-darker: #0288d1;
+  --ifm-color-primary-darkest: #0277bd;
+  --ifm-color-primary-light: #81d4fa;
+  --ifm-color-primary-lighter: #b3e5fc;
+  --ifm-color-primary-lightest: #e1f5fe;
+
+  --ifm-background-color: #0d1117;
+  --ifm-background-surface-color: #161b22;
+  --ifm-card-background: #21262d;
+
+  --docusaurus-highlighted-code-line-bg: rgba(84, 197, 248, 0.1);
+}
+
+/* Enhanced typography */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--flutter-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.markdown h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--ifm-color-primary-lightest);
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+}
+
+/* Enhanced code blocks */
+.prism-code {
+  border-radius: 12px;
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+/* Improved cards and containers */
+.card {
+  box-shadow: var(--ifm-global-shadow-md);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--ifm-global-shadow-tl);
+  transform: translateY(-2px);
+}
+
+/* Flutter-style buttons */
+.button {
+  border-radius: var(--ifm-button-border-radius);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.button:hover {
+  box-shadow: var(--ifm-global-shadow-md);
+  transform: translateY(-1px);
+}
+
+/* Enhanced navigation */
+.navbar {
+  backdrop-filter: blur(20px);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.navbar__brand {
+  font-weight: 600;
+}
+
+/* Custom Flutter-inspired hero section */
+.hero {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--flutter-cyan) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)" /></svg>');
+  opacity: 0.3;
+}
+
+.hero__title {
+  position: relative;
+  z-index: 1;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  position: relative;
+  z-index: 1;
+  font-size: 1.25rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Enhanced sidebar */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.menu__link {
+  border-radius: 8px;
+  margin: 2px 0;
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darkest);
+}
+
+.menu__link--active {
+  background: var(--ifm-color-primary);
+  color: white;
+  font-weight: 500;
+}
+
+/* Improved table of contents */
+.table-of-contents {
+  border-left: 2px solid var(--ifm-color-primary-lightest);
+  padding-left: 1rem;
+}
+
+.table-of-contents__link {
+  color: var(--ifm-color-content-secondary);
+  transition: color 0.2s ease;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+}
+
+/* Enhanced admonitions */
+.admonition {
+  border-radius: 12px;
+  border-left: 4px solid;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.admonition-heading {
+  font-weight: 600;
+}
+
+/* Flutter-specific styling for code */
+.language-dart .token.keyword {
+  color: #7c4dff;
+}
+
+.language-dart .token.string {
+  color: #4caf50;
+}
+
+.language-dart .token.function {
+  color: #2196f3;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Custom animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.markdown>* {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Feature cards styling */
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  background: var(--ifm-card-background);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--ifm-global-shadow-md);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ifm-global-shadow-tl);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0.25rem;
+}
+
+.status-badge--completed {
+  background: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.status-badge--in-progress {
+  background: rgba(255, 152, 0, 0.1);
+  color: #ff9800;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.status-badge--planned {
+  background: rgba(33, 150, 243, 0.1);
+  color: #2196f3;
+  border: 1px solid rgba(33, 150, 243, 0.3);
+}

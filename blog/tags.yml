@@ -1,0 +1,54 @@
+flutter:
+  label: Flutter
+  permalink: /flutter
+  description: Flutter framework development, widgets, and best practices
+
+architecture:
+  label: Architecture
+  permalink: /architecture
+  description: Software architecture patterns, MVVM, and design principles
+
+bloc:
+  label: BLoC
+  permalink: /bloc
+  description: BLoC state management pattern and implementation
+
+security:
+  label: Security
+  permalink: /security
+  description: Application security, authentication, and data protection
+
+kyc:
+  label: KYC
+  permalink: /kyc
+  description: Know Your Customer verification and compliance
+
+aadhaar:
+  label: Aadhaar
+  permalink: /aadhaar
+  description: Aadhaar integration and verification in Indian applications
+
+mvvm:
+  label: MVVM
+  permalink: /mvvm
+  description: Model-View-ViewModel architecture pattern
+
+verification:
+  label: Verification
+  permalink: /verification
+  description: Identity and document verification processes
+
+performance:
+  label: Performance
+  permalink: /performance
+  description: App performance optimization and best practices
+
+testing:
+  label: Testing
+  permalink: /testing
+  description: Unit testing, integration testing, and quality assurance
+
+ui-ux:
+  label: UI/UX
+  permalink: /ui-ux
+  description: User interface design and user experience optimization

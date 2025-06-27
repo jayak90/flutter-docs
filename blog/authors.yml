@@ -1,0 +1,26 @@
+developer:
+  name: Anudha Mart Development Team
+  title: Flutter Developer
+  url: https://github.com/anudhamart
+  image_url: https://github.com/anudhamart.png
+  page: true
+  socials:
+    github: anudhamart
+
+security-team:
+  name: Security & Compliance Team
+  title: Security Engineer
+  url: https://github.com/anudhamart
+  image_url: https://github.com/anudhamart.png
+  page: true
+  socials:
+    github: anudhamart
+
+architecture-team:
+  name: Architecture Team
+  title: Solution Architect
+  url: https://github.com/anudhamart
+  image_url: https://github.com/anudhamart.png
+  page: true
+  socials:
+    github: anudhamart

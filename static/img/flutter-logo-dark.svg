@@ -1,0 +1,8 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(10, 10)">
+    <!-- Flutter logo shape for dark theme -->
+    <path d="M40 0L80 40L60 60L20 20L40 0Z" fill="#81D4FA"/>
+    <path d="M20 60L40 40L60 60L40 80L20 60Z" fill="#0277BD"/>
+    <path d="M40 40L60 20L80 40L60 60L40 40Z" fill="#54C5F8"/>
+  </g>
+</svg>
